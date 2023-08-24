@@ -71,7 +71,7 @@ tab2.markdown("""
 **Credits**
 - App built in `Python` + `Streamlit` by Saksham Sharma :coffee:
 - Model used `KNeighborsClassifier`
-- Github:link: `URL`
+- Github:link: `https://github.com/Saksham1515/Heart-Disease-Prediction-System`
 """)
 tab2.divider()
 st.sidebar.header('User Input Paramter')
