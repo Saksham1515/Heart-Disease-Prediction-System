@@ -66,10 +66,10 @@ tab1.markdown("""
 - This makes heart disease a major concern to be dealt with. But it is difficult to identify heart disease because of several contributory risk factors such as diabetes, high blood pressure, high cholesterol, abnormal pulse rate, and many other factors. Due to such constraints, scientists have turned towards modern approaches like Data Mining and Machine Learning for predicting the disease.
 """)
 tab2.title("Heart Dieases Prediction System")
-tab2.image("main2.png")
+tab2.image("main1.png")
 tab2.markdown("""
 **Credits**
-- App built in `Python` + `Streamlit` by Saksham Sharma :coffee:
+- App built in `Python` + `Streamlit` by Saksham :coffee:
 - Model used `KNeighborsClassifier`
 - Github:link: `https://github.com/Saksham1515/Heart-Disease-Prediction-System`
 """)
