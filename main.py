@@ -1,15 +1,15 @@
 #%%writefile app_pred.py
 import streamlit as st
 import pandas as pd
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 
 st.set_page_config(page_title="Heart Dieases Prediction", layout="wide")
 
 df = pd.read_csv('dataset.csv')
 y = df['target']
 x = df.drop(['target'], axis=1)
-knn_classifier = KNeighborsClassifier(n_neighbors=8)
-knn_classifier.fit(x, y)
+model = LogisticRegression()
+model.fit(x,y)
 
 tab1, tab2, = st.tabs(["Info", "Model"])
 tab1.title("About Website")
@@ -70,7 +70,7 @@ tab2.image("main1.png")
 tab2.markdown("""
 **Credits**
 - App built in `Python` + `Streamlit` by Saksham :coffee:
-- Model used `KNeighborsClassifier`
+- Model used `LogisticRegression`
 - Github:link: `https://github.com/Saksham1515/Heart-Disease-Prediction-System`
 """)
 tab2.divider()
@@ -171,7 +171,7 @@ input_user_DF = pd.DataFrame(
 
 @st.cache_resource
 def prediction(input_user):
-  return knn_classifier.predict(input_user)
+  return model.predict(input_user)
 
 
 if tab2.button('Show User Input { DataFrame }'):
